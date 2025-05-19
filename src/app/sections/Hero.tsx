@@ -34,7 +34,7 @@ const Hero = () => {
 				<div className="sm:flex-row md:flex gap-10 items-center ">
 					<h1 className="text-3xl font-medium">SEO-optimized websites.</h1>
 					<div>
-						<div className="mt-2 md:mt-0 flex items-center gap-3 border rounded-full p-3 px-6 md:absolute w-fit">
+						<div className="mt-2 md:mt-0 flex items-center gap-3 border-2 rounded-full p-3 px-6 md:absolute w-fit">
 							<div className="relative flex size-2.5 ">
 								<span className="absolute inline-flex h-full w-full animate-ping-large duration-500 rounded-full bg-green-400 opacity-75"></span>
 								<span className="relative inline-flex size-2.5 rounded-full bg-green-500"></span>

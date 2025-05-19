@@ -12,7 +12,7 @@ const NavBar = () => {
 					</div>
 
 					<a href="">
-						<h4 className="font-normal text-xl">saicharanruka@gmail.com</h4>
+						<h4 className="font-normal text-lg">saicharanruka@gmail.com</h4>
 					</a>
 				</div>
 				<NavbarLogo />

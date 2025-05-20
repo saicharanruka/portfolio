@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import { Analytics } from "@vercel/analytics/next";
 
 const spaceGrotesk = Space_Grotesk({
 	variable: "--font-primary",
@@ -24,6 +25,7 @@ export default function RootLayout({
 			<body
 				className={`max-w-5xl mx-4 mt-5 lg:mx-auto antialiased bg-[#F4F4F4]`}
 			>
+				<Analytics />
 				<main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
 					<NavBar />
 

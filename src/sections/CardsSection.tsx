@@ -10,24 +10,24 @@ import Image from "next/image";
 
 const CardsSection = () => {
 	return (
-		<section className="pt-6">
-			<div className="flex flex-col gap-4">
+		<section className="pb-12 md:pb-0 pt-6">
+			<div className="flex flex-col gap-y-4">
 				<div className="grid grid-cols-1 gap-4 md:grid-cols-6">
 					<HowItWorksCard />
-					<Card className="h-[200px] col-span-2 ">
+					<Card className="h-[200px] col-span-1 md:col-span-2 ">
 						<CardHeader heading="Blog" href="/blog" />
 						<h4 className="text-md font-semibold pt-1">Check out my blog</h4>
 						<p className="text-xs text-black/50 z-0">
 							Learn tips and tricks on SEO, Web Design and everything in
 							between.
 						</p>
-						<div className="w-40 mx-auto mt-2 md:-mt-2 -z-10">
+						<div className="w-40 mx-auto -mt-4 md:-mt-3 -z-10">
 							<BlogIcon />
 						</div>
 					</Card>
 				</div>
-				<div className="grid grid-cols-1 gap-4 md:grid-cols-6">
-					<Card className="h-[200px] col-span-2 ">
+				<div className="grid grid-cols-1 gap-4 col-span-1 md:grid-cols-6">
+					<Card className="h-[200px] col-span-1 md:col-span-2 ">
 						<CardHeader heading="About Me" href="/about" />
 						<p className="text-xs text-black/50 z-0 capitalize pt-2">
 							Know more about me!
@@ -36,7 +36,7 @@ const CardsSection = () => {
 							<Image src={Memeoji} alt="Memeoji" />
 						</div>
 					</Card>
-					<Card className="h-[200px] col-span-4 ">
+					<Card className="h-[200px] col-span-1 md:col-span-4 ">
 						<CardHeader heading="Portfolio" href="/portfolio" />
 						<div className="flex justify-between">
 							<div>

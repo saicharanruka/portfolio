@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import MyFacePic from "@/assets/home/me.jpg";
+import Link from "next/link";
 
 const Hero = () => {
 	return (
@@ -15,6 +16,7 @@ const Hero = () => {
 							alt="My picture"
 							width={140}
 							height={140}
+							loading="lazy"
 							className="h-full w-auto rounded-2xl border-[3px] border-white shadow-xl shadow-black/40 grayscale"
 						/>
 					</div>
@@ -44,11 +46,14 @@ const Hero = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex-row md:flex gap-12 mt-12 items-center">
-				<button className="rounded-full bg-black text-white p-3 px-8 font-semibold shadow-xl">
+			<div className="flex flex-col-reverse md:flex-row gap-4  md:mt-12 items-center">
+				<Link
+					href="/contact"
+					className="rounded-full bg-black text-white p-3 px-8 font-semibold shadow-xl"
+				>
 					Book a call
-				</button>
-				<h4 className="mt-3 md:mt-0 max-w-sm text-base font-medium">
+				</Link>
+				<h4 className="pt-8 md:pt-0 max-w-sm text-base font-medium">
 					Tailored websites with modern design, SEO, and blazing speed — all in
 					one package.
 				</h4>

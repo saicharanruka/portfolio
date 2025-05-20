@@ -1,4 +1,4 @@
-import grainImage from "@/assets/grain.jpg";
+// import grainImage from "@/assets/grain.jpg";
 import { ComponentPropsWithoutRef } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -15,15 +15,14 @@ const Card = ({
 			)}
 			{...other}
 		>
-			<div
-				className="absolute inset-0 -z-30 opacity-[0.025]"
-				style={{
-					backgroundImage: `url(${grainImage.src})`,
-				}}
-			></div>
+			<div className="absolute inset-0 -z-30 opacity-[0.025]"></div>
 			{children}
 		</div>
 	);
 };
 
 export default Card;
+
+// style={{
+// 	backgroundImage: `url(${grainImage.src})`,
+// }}

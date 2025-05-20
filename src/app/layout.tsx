@@ -10,7 +10,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
 	title: "Ruka Sai Charan | Web developer & designer",
-	description: "Ruka Sai Charan's portfolio",
+	description:
+		"I am a web developer focused on making modern, fast and SEO optimized websites",
 };
 
 export default function RootLayout({

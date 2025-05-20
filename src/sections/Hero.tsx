@@ -21,7 +21,7 @@ const Hero = () => {
 
 					<h1 className="text-5xl font-medium tracking-wide">Sai</h1>
 				</div>
-				<h1 className="text-3xl pt-5 text-black/30 font-medium">
+				<h3 className="text-3xl pt-5 text-black/30 font-medium">
 					I help{" "}
 					{
 						<span className="text-orange-500">
@@ -30,9 +30,9 @@ const Hero = () => {
 					}{" "}
 					grow their presence with {<span className="text-black">fast,</span>}
 					{<br />}
-				</h1>
+				</h3>
 				<div className="sm:flex-row md:flex gap-10 items-center ">
-					<h1 className="text-3xl font-medium">SEO-optimized websites.</h1>
+					<h3 className="text-3xl font-medium">SEO-optimized websites.</h3>
 					<div>
 						<div className="mt-2 md:mt-0 flex items-center gap-3 border-2 rounded-full p-3 px-6 md:absolute w-fit">
 							<div className="relative flex size-2.5 ">

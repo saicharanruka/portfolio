@@ -3,7 +3,6 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { Analytics } from "@vercel/analytics/next";
-import Head from "next/head";
 
 const spaceGrotesk = Space_Grotesk({
 	variable: "--font-primary",
@@ -23,12 +22,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className={`${spaceGrotesk.variable} font-primary`}>
-			<Head>
+			<head>
 				<meta
 					name="google-site-verification"
 					content="e98s5H2TrfjOkoKAi8J9-vohdvr_RZoUKpdzryFvuQ4"
 				/>
-			</Head>
+			</head>
 			<body
 				className={`max-w-5xl mx-4 mt-5 lg:mx-auto antialiased bg-[#F4F4F4]`}
 			>

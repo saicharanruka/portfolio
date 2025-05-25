@@ -32,7 +32,7 @@ export default function RootLayout({
 				className={`max-w-5xl mx-4 mt-5 lg:mx-auto antialiased bg-[#F4F4F4]`}
 			>
 				<Analytics />
-				<main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+				<main className="flex-auto min-w-0 mt-6 flex flex-col  md:px-0">
 					<NavBar />
 
 					{children}

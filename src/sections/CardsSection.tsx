@@ -1,3 +1,5 @@
+"use client";
+
 import Card from "@/components/card/Card";
 import CardHeader from "@/components/card/CardHeader";
 import React from "react";
@@ -6,18 +8,20 @@ import { HowItWorksCard } from "@/components/card/HowItWorkCard";
 
 import BlogIcon from "@/assets/home/blog-icon.svg";
 import Memeoji from "@/assets/home/memeoji.png";
-import portfolio1 from "@/assets/portfolio-example-1.jpg";
+// import portfolio1 from "@/assets/portfolio-example-1.jpg";
 
 import Image from "next/image";
+
+import PortfolioShowcase from "@/components/card/PortfolioShowcase";
 
 const CardsSection = () => {
 	return (
 		<section className="pb-12 md:pb-0 pt-6">
 			<div className="flex flex-col gap-y-4">
 				<div className="grid grid-cols-1 gap-4 md:grid-cols-6">
-					<Card className="h-[200px] col-span-1 md:col-span-4 ">
+					<Card className="h-[220px] col-span-1 md:col-span-4 ">
 						<CardHeader heading="Portfolio" href="/portfolio" />
-						<div className="flex justify-between">
+						<div className="flex flex-col md:flex-row justify-between">
 							<div>
 								<h4 className="text-md font-semibold pt-1">Explore my work</h4>
 								<p className="text-black/50 text-xs font-medium">
@@ -25,25 +29,12 @@ const CardsSection = () => {
 									to execution.
 								</p>
 							</div>
-							<div className="p-3">
-								<div className="">
-									<Image
-										src={portfolio1}
-										width={300}
-										alt="Portfolio 1"
-										className="rounded-lg border-2 border-white relative z-0"
-									/>
-									<Image
-										src={portfolio1}
-										width={300}
-										alt="Portfolio 1"
-										className="rounded-lg border-2 border-white absolute -z-10 "
-									/>
-								</div>
+							<div className="mt-5">
+								<PortfolioShowcase />
 							</div>
 						</div>
 					</Card>
-					<Card className="h-[200px] col-span-1 md:col-span-2 ">
+					<Card className="h-[220px] col-span-1 md:col-span-2 ">
 						<CardHeader heading="Blog" href="/blog" />
 						<h4 className="text-md font-semibold pt-1">Check out my blog</h4>
 						<p className="text-xs font-medium text-black/50 z-0">
@@ -56,7 +47,7 @@ const CardsSection = () => {
 					</Card>
 				</div>
 				<div className="grid grid-cols-1 gap-4 col-span-1 md:grid-cols-6">
-					<Card className="h-[200px] col-span-1 md:col-span-2 ">
+					<Card className="h-[220px] col-span-1 md:col-span-2 ">
 						<CardHeader heading="About Me" href="/about" />
 						<p className="text-xs text-black/50 z-0 capitalize font-medium pt-1">
 							Know more about me!

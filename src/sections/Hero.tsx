@@ -10,7 +10,7 @@ const Hero = () => {
 	return (
 		<section className="pt-12">
 			<div className="max-w-xl">
-				<div className="flex items-center gap-3 ">
+				<div className="flex items-center gap-1 md:gap-3 ">
 					<h1 className="text-5xl font-medium tracking-wide">Hi, I&apos;m</h1>
 					<div className="w-auto h-28">
 						<Image

@@ -44,7 +44,7 @@ export function HowItWorksCard() {
 	const [currentStep, setCurrentStep] = useState(0);
 
 	return (
-		<Card className="h-[200px] col-span-1 md:col-span-4 ">
+		<Card className="h-[220px] col-span-1 md:col-span-4 ">
 			<CardHeader heading="How I Work" href="/work" />
 			<div className="flex flex-col gap-1 p-2">
 				<h4 className="text-md font-semibold">{steps[currentStep].title}</h4>

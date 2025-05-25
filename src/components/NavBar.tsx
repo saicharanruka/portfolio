@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { NavLinks } from "@/constants/data";
+import { NavLinks, mobileNavLinks } from "@/constants/data";
 
 const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ const NavBar = () => {
 					</div>
 
 					<Link href="/">
-						<h4 className="font-normal text-lg">saicharanruka@gmail.com</h4>
+						<h4 className="font-normal text-lg">hello@saicharanruka.me</h4>
 					</Link>
 				</div>
 				<div className="hidden md:flex justify-center items-center gap-8 ">
@@ -91,7 +91,7 @@ const NavBar = () => {
 						className="overflow-hidden"
 					>
 						<div className="flex flex-col items-center gap-4 py-4">
-							{NavLinks.map((link) => (
+							{mobileNavLinks.map((link) => (
 								<a key={link.href} href={link.href} className="">
 									{link.title}
 								</a>

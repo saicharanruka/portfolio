@@ -11,6 +11,8 @@ import Memeoji from "@/assets/home/memeoji.png";
 import { client } from "@/lib/sanity";
 import { ThumbnailImage } from "@/lib/interface";
 
+export const revalidate = 60;
+
 async function getImageData() {
 	const query = `*[_type == "portfolioProject"] {image}[0...4]`;
 	const data = await client.fetch(query);

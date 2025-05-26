@@ -33,7 +33,7 @@ export default function OptionSelector({
 	};
 
 	return (
-		<div className={`space-y-2 ${className}`}>
+		<div className={`space-y-2 max-w-xl ${className}`}>
 			<p className="font-medium">What’s in your mind?*</p>
 			<div className="flex flex-wrap gap-2">
 				{options.map((option) => (

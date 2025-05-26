@@ -8,10 +8,6 @@ export const NavLinks = [
 		href: "/portfolio",
 	},
 	{
-		title: "How I Work",
-		href: "/work",
-	},
-	{
 		title: "Blog",
 		href: "/blog",
 	},
@@ -29,10 +25,6 @@ export const mobileNavLinks = [
 	{
 		title: "Portfolio",
 		href: "/portfolio",
-	},
-	{
-		title: "How I Work",
-		href: "/work",
 	},
 	{
 		title: "Blog",

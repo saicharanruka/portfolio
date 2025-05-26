@@ -1,64 +1,70 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+// import Image from "next/image";
+import portfolio1 from "@/assets/portfolio-example-1.jpg";
+import portfolio2 from "@/assets/portfolio-example-2.jpg";
+import portfolio3 from "@/assets/portfolio-example-3.jpg";
+import Image, { StaticImageData } from "next/image";
+import { ThumbnailImage } from "@/lib/interface";
+import { urlFor } from "@/lib/sanity";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-let interval: any;
-import BgImage from "@/assets/portfolio-example-1.jpg";
-
-type Card = {
-	id: number;
-	name: string;
-	designation: string;
-	content: React.ReactNode;
-};
+const images: StaticImageData[] = [portfolio1, portfolio2, portfolio3];
 
 export const CardStack = ({
-	items,
-	offset,
-	scaleFactor,
+	data,
+	offset = 10,
+	scaleFactor = 0.06,
 }: {
-	items: Card[];
+	data: ThumbnailImage[];
 	offset?: number;
 	scaleFactor?: number;
 }) => {
-	const CARD_OFFSET = offset || 10;
-	const SCALE_FACTOR = scaleFactor || 0.06;
-	const [cards, setCards] = useState<Card[]>(items);
+	const [activeIndex, setActiveIndex] = useState(0);
 
 	useEffect(() => {
-		startFlipping();
+		const interval = setInterval(() => {
+			setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+		}, 3000);
 
 		return () => clearInterval(interval);
 	}, []);
-	const startFlipping = () => {
-		interval = setInterval(() => {
-			setCards((prevCards: Card[]) => {
-				const newArray = [...prevCards]; // create a copy of the array
-				newArray.unshift(newArray.pop()!); // move the last element to the front
-				return newArray;
-			});
-		}, 2500);
-	};
 
 	return (
-		<div className="relative  h-24 w-60 md:w-96">
-			{cards.map((card, index) => {
+		<div className="relative h-60 w-60 md:w-96 overflow-visible">
+			{data.map((image, index) => {
+				// Relative position based on activeIndex (0 is front, 1 is mid, 2 is back)
+				const relativeIndex =
+					(index - activeIndex + images.length) % images.length;
+
+				// Only show top 3 cards
+				if (relativeIndex > 2) return null;
+
 				return (
 					<motion.div
-						key={card.id}
-						className="absolute bg-lime-100 h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
+						key={index}
+						className="absolute h-60 w-[300px] md:w-96 md:h-60 rounded-3xl overflow-hidden shadow-xl border-2 border-neutral-200  flex justify-center items-center bg-transparent"
 						style={{
 							transformOrigin: "top center",
-							backgroundImage: `url(${BgImage.src})`,
-							objectFit: "cover",
 						}}
 						animate={{
-							top: index * -CARD_OFFSET,
-							scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
-							zIndex: cards.length - index, //  decrease z-index for the cards that are behind
+							top: relativeIndex * -offset,
+							scale: 1 - relativeIndex * scaleFactor,
+							zIndex: images.length - relativeIndex,
+							opacity: 1 - relativeIndex * 0.1,
 						}}
-					></motion.div>
+						transition={{
+							duration: 0.6,
+							ease: "easeInOut",
+						}}
+					>
+						<Image
+							src={urlFor(image.image).url()}
+							alt={`Portfolio ${index + 1}`}
+							className="object-cover"
+							fill
+						/>
+					</motion.div>
 				);
 			})}
 		</div>

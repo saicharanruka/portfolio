@@ -29,12 +29,12 @@ const steps = [
 			"This is where your site comes alive. Smooth animations, CMS for easy updates, and any third-party tools (like booking forms, email integrations, etc.) get wired in here.",
 	},
 	{
-		title: "🔍 Step 04: SEO Optimization",
+		title: "🔍 Step 04: SEO Optimization & Content Structuring",
 		content:
 			"I optimize every page to rank well on search engines — clean metadata, structured content, blazing speed, and best practices to bring in organic traffic.",
 	},
 	{
-		title: "🌐 Step 05: Hosting & Deployment",
+		title: "🌐 Step 05: Hosting, Deployment & Analytics",
 		content:
 			"Your finished site gets deployed to a secure, fast server — with backups, analytics, and performance monitoring. Everything works, everywhere, all the time.",
 	},
@@ -45,18 +45,21 @@ export function HowItWorksCard() {
 
 	return (
 		<Card className="h-[220px] col-span-1 md:col-span-4 ">
-			<CardHeader heading="How I Work" href="/work" />
+			<CardHeader heading="How I Work" />
 			<div className="flex flex-col gap-1 p-2">
 				<h4 className="text-md font-semibold">{steps[currentStep].title}</h4>
-				<p className="text-xs text-black/50"> {steps[currentStep].content} </p>
+				<p className="text-xs text-black/50 h-16">
+					{" "}
+					{steps[currentStep].content}{" "}
+				</p>
 
 				<Pagination>
-					<PaginationContent className="flex justify-center bg-white border rounded-full mt-3">
+					<PaginationContent className="flex justify-center bg-white border rounded-full">
 						{steps.map((step, index) => (
 							<PaginationItem key={index}>
 								<PaginationLink
 									onClick={() => setCurrentStep(index)}
-									className={`cursor-pointer rounded-full px-8 text-xs ${
+									className={`cursor-pointer rounded-full px-7 md:px-8 text-xs ${
 										currentStep === index
 											? "bg-black text-white hover:bg-black hover:text-white"
 											: "hover:bg-gray-200"

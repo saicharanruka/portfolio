@@ -31,7 +31,7 @@ export const CardStack = ({
 	}, []);
 
 	return (
-		<div className="relative h-60 w-60 md:w-96 overflow-visible">
+		<div className="relative h-60 w-full md:w-96 overflow-visible">
 			{data.map((image, index) => {
 				// Relative position based on activeIndex (0 is front, 1 is mid, 2 is back)
 				const relativeIndex =
@@ -43,7 +43,7 @@ export const CardStack = ({
 				return (
 					<motion.div
 						key={index}
-						className="absolute h-60 w-[300px] md:w-96 md:h-60 rounded-3xl overflow-hidden shadow-xl border-2 border-neutral-200  flex justify-center items-center bg-transparent"
+						className="absolute h-60 w-full md:w-96 md:h-60 rounded-3xl overflow-hidden shadow-xl border-2 border-neutral-200  flex justify-center items-center bg-transparent"
 						style={{
 							transformOrigin: "top center",
 						}}
@@ -63,6 +63,7 @@ export const CardStack = ({
 							alt={`Portfolio ${index + 1}`}
 							className="object-cover"
 							fill
+							loading="lazy"
 						/>
 					</motion.div>
 				);

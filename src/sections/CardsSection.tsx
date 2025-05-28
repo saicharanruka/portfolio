@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-import Card from "@/components/card/Card";
-import CardHeader from "@/components/card/CardHeader";
+import { Card } from "@/components/card/Card";
 
 import { HowItWorksCard } from "@/components/card/HowItWorkCard";
 import { CardStack } from "@/components/ui/card-stack";
@@ -25,8 +24,11 @@ export default async function CardsSection() {
 		<section className="pb-12 md:pb-0 pt-6">
 			<div className="flex flex-col gap-y-4">
 				<div className="grid grid-cols-1 gap-4 md:grid-cols-6">
-					<Card className="h-[220px] col-span-1 md:col-span-4 ">
-						<CardHeader heading="Portfolio" href />
+					<Card
+						className="h-[220px] col-span-1 md:col-span-4 "
+						heading="Portfolio"
+						href="/portfolio"
+					>
 						<div className="flex flex-col md:flex-row justify-between">
 							<div>
 								<h4 className="text-md font-semibold pt-1">Explore my work</h4>
@@ -35,13 +37,16 @@ export default async function CardsSection() {
 									to execution.
 								</p>
 							</div>
-							<div className=" pt-5 md:pt-0 md:p-2">
+							<div className=" pt-5 md:pt-0 md:p-2 flex justify-between ">
 								<CardStack data={data} />
 							</div>
 						</div>
 					</Card>
-					<Card className="h-[220px] col-span-1 md:col-span-2 ">
-						<CardHeader heading="Blog" href />
+					<Card
+						className="h-[220px] col-span-1 md:col-span-2 "
+						heading="Blog"
+						href="/blog"
+					>
 						<h4 className="text-md font-semibold pt-1">Check out my blog</h4>
 						<p className="text-xs font-medium text-black/50 z-0">
 							Learn tips and tricks on SEO, Web Design and everything in
@@ -53,8 +58,11 @@ export default async function CardsSection() {
 					</Card>
 				</div>
 				<div className="grid grid-cols-1 gap-4 col-span-1 md:grid-cols-6">
-					<Card className="h-[220px] col-span-1 md:col-span-2 ">
-						<CardHeader heading="About Me" href />
+					<Card
+						className="h-[220px] col-span-1 md:col-span-2 "
+						heading="About Me"
+						href="/about-me"
+					>
 						<p className="text-xs text-black/50 z-0 capitalize font-medium pt-1">
 							Know more about me!
 						</p>

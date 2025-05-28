@@ -8,8 +8,7 @@ import {
 	PaginationLink,
 } from "@/components/ui/pagination";
 
-import Card from "./Card";
-import CardHeader from "./CardHeader";
+import { Card } from "./Card";
 
 // Define the content for each step
 const steps = [
@@ -44,8 +43,7 @@ export function HowItWorksCard() {
 	const [currentStep, setCurrentStep] = useState(0);
 
 	return (
-		<Card className="h-[220px] col-span-1 md:col-span-4 ">
-			<CardHeader heading="How I Work" />
+		<Card className="h-[220px] col-span-1 md:col-span-4 " heading="How I Work">
 			<div className="flex flex-col gap-1 p-2">
 				<h4 className="text-md font-semibold">{steps[currentStep].title}</h4>
 				<p className="text-xs text-black/50 h-16">

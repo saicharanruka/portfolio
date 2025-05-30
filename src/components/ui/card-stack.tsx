@@ -1,15 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-// import Image from "next/image";
-import portfolio1 from "@/assets/portfolio-example-1.jpg";
-import portfolio2 from "@/assets/portfolio-example-2.jpg";
-import portfolio3 from "@/assets/portfolio-example-3.jpg";
 import Image, { StaticImageData } from "next/image";
 import { ThumbnailImage } from "@/lib/interface";
 import { urlFor } from "@/lib/sanity";
 
-const images: StaticImageData[] = [portfolio1, portfolio2, portfolio3];
 
 export const CardStack = ({
 	data,
@@ -24,7 +19,7 @@ export const CardStack = ({
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+			setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
 		}, 3000);
 
 		return () => clearInterval(interval);
@@ -35,7 +30,7 @@ export const CardStack = ({
 			{data.map((image, index) => {
 				// Relative position based on activeIndex (0 is front, 1 is mid, 2 is back)
 				const relativeIndex =
-					(index - activeIndex + images.length) % images.length;
+					(index - activeIndex + data.length) % data.length;
 
 				// Only show top 3 cards
 				if (relativeIndex > 2) return null;

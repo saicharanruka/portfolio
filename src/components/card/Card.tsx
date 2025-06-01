@@ -18,7 +18,7 @@ export const Card: React.FC<CardProps> = ({
 	const content = (
 		<div
 			className={twMerge(
-				"overflow-hidden bg-transparent rounded-3xl gap-5 relative z-0 p-3 border-white border-2 shadow-xl transition",
+				"hover:scale-105 overflow-hidden bg-transparent rounded-3xl gap-5 relative z-0 p-3 border-white border-2 shadow-xl transition",
 				className
 			)}
 			{...other}

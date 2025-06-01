@@ -92,9 +92,13 @@ const NavBar = () => {
 					>
 						<div className="flex flex-col items-center gap-4 py-4">
 							{mobileNavLinks.map((link) => (
-								<a key={link.href} href={link.href} className="">
+								<Link
+									key={link.href}
+									href={link.href}
+									className="p-1 md:p-0 underline hover:font-bold transition"
+								>
 									{link.title}
-								</a>
+								</Link>
 							))}
 						</div>
 					</motion.div>

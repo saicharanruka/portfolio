@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Hero = () => {
 	return (
-		<section className="pt-12">
+		<section className="pt-8">
 			<div className="max-w-xl">
 				<div className="flex items-center gap-1 md:gap-3 ">
 					<h1 className="text-5xl font-medium tracking-wide">Hi, I&apos;m</h1>
@@ -43,7 +43,7 @@ const Hero = () => {
 								<span className="absolute inline-flex h-full w-full animate-ping-large duration-500 rounded-full bg-green-400 opacity-75"></span>
 								<span className="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
 							</div>
-							<p>Open to work</p>
+							<p className="text-black/60">Open to work</p>
 						</div>
 					</div>
 				</div>
@@ -55,6 +55,7 @@ const Hero = () => {
 				>
 					Book a call
 				</Link>
+
 				<h4 className="pt-8 md:pt-0 max-w-sm text-base font-medium">
 					Tailored websites with modern design, SEO, and blazing speed — all in
 					one package.

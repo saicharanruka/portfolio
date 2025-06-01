@@ -23,7 +23,7 @@ export default async function CardsSection() {
 	return (
 		<section className="pb-12 md:pb-0 pt-6">
 			<div className="flex flex-col gap-y-4">
-				<div className="grid grid-cols-1 gap-4 md:grid-cols-6">
+				<div className="grid grid-cols-1 gap-7 md:grid-cols-6">
 					<Card
 						className="h-[220px] col-span-1 md:col-span-4 "
 						heading="Portfolio"
@@ -31,7 +31,7 @@ export default async function CardsSection() {
 					>
 						<div className="flex flex-col md:flex-row justify-between">
 							<div>
-								<h4 className="text-md font-semibold pt-1">Explore my work</h4>
+								<h4 className="text-xl font-semibold pt-1">Explore my work</h4>
 								<p className="text-black/50 text-xs font-medium">
 									See how I design, develop, and optimize websites — from idea
 									to execution.
@@ -47,7 +47,7 @@ export default async function CardsSection() {
 						heading="Blog"
 						href="/blog"
 					>
-						<h4 className="text-md font-semibold pt-1">Check out my blog</h4>
+						<h4 className="text-xl font-semibold pt-1">Check out my blog</h4>
 						<p className="text-xs font-medium text-black/50 z-0">
 							Learn tips and tricks on SEO, Web Design and everything in
 							between.
@@ -61,7 +61,7 @@ export default async function CardsSection() {
 					<Card
 						className="h-[220px] col-span-1 md:col-span-2 "
 						heading="About Me"
-						href="/about-me"
+						href="/about"
 					>
 						<p className="text-xs text-black/50 z-0 capitalize font-medium pt-1">
 							Know more about me!

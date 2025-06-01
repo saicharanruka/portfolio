@@ -45,8 +45,8 @@ export function HowItWorksCard() {
 	return (
 		<Card className="h-[220px] col-span-1 md:col-span-4 " heading="How I Work">
 			<div className="flex flex-col gap-1 p-2">
-				<h4 className="text-md font-semibold">{steps[currentStep].title}</h4>
-				<p className="text-xs text-black/50 h-16">
+				<h4 className="text-xl font-semibold">{steps[currentStep].title}</h4>
+				<p className="text-xs font-medium text-black/50 h-16">
 					{" "}
 					{steps[currentStep].content}{" "}
 				</p>

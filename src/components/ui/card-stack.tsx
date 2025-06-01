@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import { ThumbnailImage } from "@/lib/interface";
 import { urlFor } from "@/lib/sanity";
 
+//TODO: Images are still being imported locally
 
 export const CardStack = ({
 	data,
@@ -29,8 +30,7 @@ export const CardStack = ({
 		<div className="relative h-60 w-full md:w-96 overflow-visible">
 			{data.map((image, index) => {
 				// Relative position based on activeIndex (0 is front, 1 is mid, 2 is back)
-				const relativeIndex =
-					(index - activeIndex + data.length) % data.length;
+				const relativeIndex = (index - activeIndex + data.length) % data.length;
 
 				// Only show top 3 cards
 				if (relativeIndex > 2) return null;
@@ -56,7 +56,7 @@ export const CardStack = ({
 						<Image
 							src={urlFor(image.image).url()}
 							alt={`Portfolio ${index + 1}`}
-							className="object-cover"
+							className="bg-clip-border overflow-clip "
 							fill
 							loading="lazy"
 						/>

@@ -137,6 +137,7 @@ const About = () => {
 							width={250}
 							height={250}
 							className="rounded-2xl"
+							loading="lazy"
 						/>
 					</div>
 				</div>

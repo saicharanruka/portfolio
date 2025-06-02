@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 
-import MyFacePic from "@/assets/home/me.jpg";
+import MyFacePic from "@/assets/home/me.webp";
 import Link from "next/link";
 
 const Hero = () => {

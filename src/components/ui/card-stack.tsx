@@ -5,8 +5,6 @@ import Image from "next/image";
 import { ThumbnailImage } from "@/lib/interface";
 import { urlFor } from "@/lib/sanity";
 
-//TODO: Images are still being imported locally
-
 export const CardStack = ({
 	data,
 	offset = 10,
@@ -58,7 +56,7 @@ export const CardStack = ({
 							alt={`Portfolio ${index + 1}`}
 							className="bg-clip-border overflow-clip "
 							fill
-							loading="lazy"
+							placeholder="empty"
 						/>
 					</motion.div>
 				);

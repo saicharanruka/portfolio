@@ -5,8 +5,8 @@ import { Card } from "@/components/card/Card";
 import { HowItWorksCard } from "@/components/card/HowItWorkCard";
 import { CardStack } from "@/components/ui/card-stack";
 
-import BlogIcon from "@/assets/home/blog-icon.svg";
-import Memeoji from "@/assets/home/memeoji.png";
+import BlogIcon from "@/assets/home/blog-icon.webp";
+import bookIcon from "@/assets/home/bookIcon.webp";
 import { client } from "@/lib/sanity";
 import { ThumbnailImage } from "@/lib/interface";
 
@@ -53,7 +53,7 @@ export default async function CardsSection() {
 							between.
 						</p>
 						<div className="w-40 mx-auto -z-10">
-							<BlogIcon />
+							<Image src={BlogIcon} alt="Blog Icon" loading="lazy" />
 						</div>
 					</Card>
 				</div>
@@ -68,7 +68,7 @@ export default async function CardsSection() {
 							Explore my skills, services, and certifications in one place.
 						</p>
 						<div className="mx-auto w-36">
-							<Image src={Memeoji} alt="Memeoji" />
+							<Image src={bookIcon} alt="Book Icon" loading="lazy" />
 						</div>
 					</Card>
 					<HowItWorksCard />

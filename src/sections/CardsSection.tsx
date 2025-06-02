@@ -52,7 +52,7 @@ export default async function CardsSection() {
 							Learn tips and tricks on SEO, Web Design and everything in
 							between.
 						</p>
-						<div className="w-40 mx-auto -mt-4 md:-mt-3 -z-10">
+						<div className="w-40 mx-auto -z-10">
 							<BlogIcon />
 						</div>
 					</Card>
@@ -63,10 +63,11 @@ export default async function CardsSection() {
 						heading="About Me"
 						href="/about"
 					>
+						<h4 className="text-xl font-semibold pt-1"> Learn More About Me</h4>
 						<p className="text-xs text-black/50 z-0 capitalize font-medium pt-1">
-							Know more about me!
+							Explore my skills, services, and certifications in one place.
 						</p>
-						<div className="mx-auto -mt-1 w-36">
+						<div className="mx-auto w-36">
 							<Image src={Memeoji} alt="Memeoji" />
 						</div>
 					</Card>

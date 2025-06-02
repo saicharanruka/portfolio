@@ -67,3 +67,13 @@
 		color: var(--foreground);
 	}
 }
+
+@layer utilities {
+	.animate-slow-spin {
+		animation: spin 8s linear infinite;
+	}
+
+	.animate-fast-spin {
+		animation: spin 1s linear infinite;
+	}
+}

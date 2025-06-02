@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { ThumbnailImage } from "@/lib/interface";
 import { urlFor } from "@/lib/sanity";
 
@@ -24,7 +24,7 @@ export const CardStack = ({
 		}, 3000);
 
 		return () => clearInterval(interval);
-	}, []);
+	});
 
 	return (
 		<div className="relative h-60 w-full md:w-96 overflow-visible">
@@ -45,7 +45,7 @@ export const CardStack = ({
 						animate={{
 							top: relativeIndex * -offset,
 							scale: 1 - relativeIndex * scaleFactor,
-							zIndex: images.length - relativeIndex,
+							zIndex: data.length - relativeIndex,
 							opacity: 1 - relativeIndex * 0.1,
 						}}
 						transition={{
